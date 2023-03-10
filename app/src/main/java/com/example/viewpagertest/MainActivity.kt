@@ -10,7 +10,6 @@ class MainActivity : AppCompatActivity() {
     private var titlesList = mutableListOf<String>()
     private var descList = mutableListOf<String>()
     private var imagesList = mutableListOf<Int>()
-    val viewPager2: ViewPager2 = findViewById(R.id.viewpager2)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         postToList()
 
+        val viewpager2 = findViewById<ViewPager2>(R.id.viewpager2)
         viewpager2.adapter = ViewPagerAdapter (titlesList,descList,imagesList)
         viewpager2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
